@@ -1,6 +1,6 @@
 const connection = require('./../database/connection')
 const crypto = require('crypto');
-
+const { celebrate, Segments, Joi} = require('celebrate')
 module.exports = {
     async create(req, res){
         const {name, email, whatsapp, city, uf} = req.body;
